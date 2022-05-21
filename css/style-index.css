@@ -1,0 +1,95 @@
+*,
+*::after,
+*::before {
+    /*box-sizing: inherit; /*todos los elementos heredaran del nodo principal... ( de html{} )*/
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: #fbfbfe; */
+}
+a {text-decoration: none;}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+}
+
+.header {
+    background-color: #002D4C;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    margin: 0;
+    top: 0;
+}
+.logo {
+    height: 100%;
+}
+
+.btn-sesion-start,
+.btn-signup {
+    font-family: 'Gothic A1';
+    margin: 1em 1em 0 0;
+    padding: 1em 2em;
+    color: white;
+    background-color: #246f9c;
+    float: right;
+}
+.btn-sesion-start:hover,
+.btn-signup:hover {
+    background-color:#00548C;
+}
+
+.class-body {
+    height: inherit;
+    padding-top: 80px;
+}
+.bg-1 {
+    padding-top: 120px;
+    height: 100%;
+    background-image: url(../images/bg-2.jpg);
+}
+.box-title {
+    width: 500px;
+    height: 300px;
+    box-shadow: 0 20px 50px 10px #000;
+    border-radius: 20px;
+    padding: 50px;
+    text-align: center;
+    border: 5px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #246f9c;
+}
+.title-body {
+    font-family: 'Gothic A1';
+    font-size: 2rem;
+    font-weight: 700;
+    /* font-size: 35px; */
+    color: white;
+}
+
+.btn-buy-book,
+.btn-sell-book {
+    font-family: 'Gothic A1';
+    display: inline-block;
+    margin-top: 40px;
+    padding: 1em;
+    border-radius: 2cm;
+    color: white;
+    background-color: #04bbe7;
+    background-color: #002D4C;
+}
+.btn-buy-book:hover,
+.btn-sell-book:hover {
+    background-color: #04bbe7;
+}
+.btn-buy-book {
+    float: left;
+}
+.btn-sell-book {
+    float: right;
+}

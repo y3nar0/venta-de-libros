@@ -1,0 +1,483 @@
+@font-face {
+    font-family: 'ComicNeue-Bold';
+    src: url(../font/ComicNeue-Bold.ttf) format('truetype');
+    font-style: normal;
+}
+/* @font-face {
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: local('Gothic A1 Black'), local('GothicA1-Black'), url(https://fonts.gstatic.com/s/gothica1/v8/CSR44z5ZnPydRjlCCwlC6OAKTZFstupOfBjNSl5zPnvB_dOjwqCu.0.woff2) format('woff2');
+    unicode-range: U+f9ca-fa0b, U+ff03-ff05, U+ff07, U+ff0a-ff0b, U+ff0d-ff19, U+ff1b, U+ff1d, U+ff20-ff5b, U+ff5d, U+ffe0-ffe3, U+ffe5-ffe6;
+} */
+
+*,
+*::after,
+*::before {
+    /*box-sizing: inherit; /*todos los elementos heredaran del nodo principal... ( de html{} )*/
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fbfbfe;
+}
+a {text-decoration: none; list-style: none;}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+}
+
+.header {
+    background-color: #002D4C;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    margin: 0;
+    top: 0;
+    z-index: 50;
+}
+.logo {
+    height: 100%;
+}
+
+.btn-exit {
+    margin: 1em 3em 0 0;
+    padding: 1em 2em;
+    color: white;
+    background-color: #246f9c;
+    float: right;
+}
+.btn-exit:hover {
+    background-color:#00548C;
+}
+/* -----------------------------FIN HEADER--------------------------- */
+
+
+/* -----------------------------INICIO BODY-------------------------- */
+.body {
+    height: 100%;
+    padding-top: 80px;
+}
+
+/* --------------------------------MENU------------------------------ */
+.menu { /*ul*/
+    line-height: 42px;
+    margin: 1em auto;
+    /* outline: 1px solid red; */
+    padding-left: 0;
+    width: 15em;
+    position: relative;
+}
+
+
+.menu li:first-child a {background: url(../images/icons/misdatos.png) no-repeat center left / 2.2rem;}
+.menu li:nth-child(2) a {background: url(../images/icons/libros-1.png) no-repeat center left / 2.2rem;}
+.menu li:nth-child(3) a {background: url(../images/icons/libros-2.png) no-repeat center left / 2.2rem;}
+.menu li:nth-child(4) a {background: url(../images/icons/libros-3.png) no-repeat center left / 2.2rem;}
+.menu li:nth-child(5) a {background: url(../images/icons/ventas.png) no-repeat center left / 2.2rem;}
+.menu li:nth-child(6) a {background: url(../images/icons/key.svg) no-repeat center left / 2.2rem;}
+.menu li:nth-child(7) a {background: url(../images/icons/salir.png) no-repeat center left / 2.2rem;}
+.menu li:last-child a {background: url(../images/icons/cerrar.svg) no-repeat center left / 2.2rem;}
+
+.menu a {
+    /* position: absolute; */
+    /* margin: .5em 0; */
+
+    /* background: url(../images/menu-icon.png) no-repeat center left; */
+    color: white;
+    display: block;
+    padding-left: 3em;
+    padding-top: .3em;
+    padding-bottom: .5em;
+    text-transform: uppercase;
+    
+    /* top: 50%; */
+    /* vertical-align: middle; */
+    /* transform: translateY(50%); */
+    
+    transition: all .5s;
+    width: 100%;
+}
+.menu a:hover {
+    margin-left: 1em;
+}
+.menu li {
+    box-shadow: 3px 0 rgba(255,255,255,.2) inset;
+    /* margin-bottom: 5px; */
+    padding-left: .8em;
+    /* outline: 1px solid green; */
+    /* transition: all .5s; */
+}
+.menu .baja {
+    /* box-shadow: 3px 0 rgba(255,255,255,.2) inset; */
+    box-shadow: 3px 0 red inset;
+    /* margin-bottom: 5px; */
+    padding-left: .8em;
+    /* outline: 1px solid green; */
+    transition: all .5s;
+}
+.menu li:hover {
+    box-shadow: 15em 0 rgba(255,255,255,.2) inset;
+}
+.menu .baja:hover {
+    box-shadow: 15em 0 red inset;
+}
+nav {
+    background: #246f9c;
+    box-sizing: border-box;
+    left: -18em;
+    height: 85%;
+    padding-right: .25em;
+    padding-top: 3em;
+    position: absolute;
+    top: 80px;
+    transition: all .3s;
+    z-index: 20;
+}
+nav.mostrar {
+    top: 80px;
+    left: 0;
+}
+#mostrar-nav {
+    position: relative;
+    display: block;
+    background: url(../images/icons/menu-icon-42x42.png) no-repeat;
+    cursor: pointer;
+    left: 1em;
+    height: 42px;
+    width: 42px;
+    top: 1em;
+    z-index: 30;
+}
+/* ------------------------------FIN MENU---------------------------- */
+
+/* ---------------------------DATOS IMAGEN ---------------------------*/
+.box-imagen {
+    display: block;
+    height: 100%;
+    width: 25%;
+    background-color: #F2F3F7;
+    float: left;
+    margin-top: -42px;
+    margin-left: 5rem;
+    position: relative;
+    padding-top: 3rem;
+}
+.modal-imagen-foto {
+    display: block;
+    height: 190px;
+    width: 190px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+.imagen-foto {
+    /* height: 30%; */
+    height: 190px;
+    width: 190px;
+    /* width: 50%; */
+    margin-left: auto;
+    margin-right: auto;
+    background-size: 100% 100%;
+    /* background-clip: content-box; */
+    /* background-repeat: no-repeat; */
+    border: 8px solid white;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+.nombre {
+    font-family: 'Gothic A1';
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 700;
+    transform:scaleY(1.2);
+    margin-bottom: 3rem;
+    color: #00395E;    
+}
+.facultad {
+    display: inline-block;
+    font-family: 'Gothic A1';
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: 1.3rem;
+    text-transform: uppercase;
+    color: #00548C;
+}
+.carrera {
+    display: inline-block;
+    font-family: 'Gothic A1';
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #00548C;
+}
+/* ------------------------FIN DATOS IMAGEN --------------------------*/
+
+/* ---------------------------------DATOS-----------------------------*/
+.box-datos {
+    display: block;
+    height: 100%;
+    width: 69%;
+    margin-top: -42px;
+    float: right;
+    /* background-color: yellow; */
+    padding: 3rem 1rem 3rem 3rem;
+}
+.datos{
+    height: 100%;
+    width: 100%;
+    /* background-color: yellow; */
+}
+.d-matricula,
+.d-nombre,
+.d-correo,
+.d-telefono,
+.d-carrera {
+    height: 50%;
+    width: 33.33%;
+    float: left;
+}
+
+.d-matricula .descripcion { border-bottom: 3px solid #46886E; }
+.d-nombre .descripcion { border-bottom: 3px solid #778484; }
+.d-telefono .descripcion { border-bottom: 3px solid #00A1A2; }
+.d-carrera .descripcion { border-bottom: 3px solid #CC5819; }
+.d-correo .descripcion { border-bottom: 3px solid #1862AC; }
+
+.descripcion {
+    position: relative;
+    height: 80%;
+    width: 90%;
+    margin: auto;
+    margin-top: 8%;
+    background-color: white;
+    box-shadow: 0 0 50px 0px rgba(0,0,0,.1);
+    /* box-shadow: derecha abajo difuminado grosor #000; */
+}
+.descripcion span {
+    font-family: 'Gothic A1';
+    font-weight: 600;
+    display: inline-block;
+    font-size: 1.5em;
+    transform:scaleY(1.2);
+    margin: 1.5rem 0 0 1.5rem;
+    padding-left: 2.5rem;
+    color: #002D4C;
+}
+
+.d-matricula span {background: url(../images/icons/matricula.png) no-repeat center left / 2.2rem 100%;}
+.d-nombre span {background: url(../images/icons/nombre.png) no-repeat center left / 2.2rem 100%;}
+.d-telefono span {background: url(../images/icons/telefono.png) no-repeat center left / 2.2rem 100%;}
+.d-carrera span {background: url(../images/icons/carrera.png) no-repeat center left / 2.2rem 100%;}
+.d-correo span {background: url(../images/icons/correo.png) no-repeat center left / 2.2rem 100%;}
+
+.editar {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    right: 0;
+    bottom: 0;
+    height: 10%;
+    width: 10%;
+}
+
+.descripcion p {
+    margin-top: 2em;
+    margin-left: 1em;
+    font-family: 'Gothic A1';
+    font-weight: 600;
+    font-size: 1.5em;
+    color: #246f9c;
+}
+.d-nombre p {
+    /* outline: 1px solid black; */
+    width: 82%;
+    height: 45%;
+    overflow: hidden;
+}
+.d-telefono p::before {
+    content: '+52 ';
+}
+.d-correo p {
+    width: 85%;
+    /* outline: 1px solid black; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* -----------------------------FIN DATOS-----------------------------*/
+
+/* --------------------------VENTANA MODAL--------------------------- */
+.Modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,.3);
+    /* display: flex; */
+    justify-content: center;
+    z-index: 50;
+    /* align-items: center; */
+    display: none;
+}
+.Modal:target {
+    display: flex;
+}
+
+.Modal-box {
+    position: absolute;
+    top: 25%;
+    width: 50%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    background-color: white;
+}
+
+.Modal h2 {
+    /* display: inline-block; */
+    font-size: 2.5em;
+    line-height: 2em;
+    text-align: center;
+    color: #002D4C;
+    /* background-color: yellow; */
+}
+
+.Modal form {
+    /* background-color: red; */
+    /* text-align: center; */
+}
+.Modal p {
+    display: inline-block;
+    font-size: 1.5em;
+    line-height: 2em;
+    margin-left: 4em;
+    margin-right: 1em;
+    color: #00548C;
+    /* background-color: green ; */
+}
+
+/*.Modal input:not([type="submit"]) {*/
+.Modal input {
+    margin-bottom: .5rem;
+    padding: .5rem;
+    /* border: thin solid red; */
+    /* background-color: green; */
+    color: #00548C;
+}
+.Modal-box div {
+    text-align: center;
+}
+.Modal input[type="submit"] {
+    cursor: pointer;
+    width: 17%;
+    font-size: 1.5em;
+    margin-top: 1.3em;
+    padding: .5rem auto;
+    border: 0;
+    border-radius: .25rem;
+    background-color: #00548C;
+    color: white;
+    /* transition: all .3s ease-in; */
+}
+.Modal input[type="submit"]:hover {
+    background-color: #002D4C;
+}
+.cerrar-modal {
+    display: block;
+    width: 17%;
+    font-size: 1.8em;
+    margin: .5em auto;
+    /* padding: 1em auto; */
+    border: 0;
+    border-radius: .25rem;
+    background-color: red;
+    color: white;
+    /* transition: all .3s ease-in; */
+}
+.cerrar-modal:hover {
+    background-color: #aa0000;
+}
+
+
+
+
+
+
+
+
+
+
+
+.Modal-libro { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,.3);
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    display: none;
+}
+.Modal-libro:target {
+    display: flex;
+}
+.Modal-box-libro {
+    /* position: absolute; */
+    width: 50%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    /* padding: 0 5%; */
+}
+.Modal-libro p {
+    /* display: inline; */
+    font-size: 1.5em;
+    line-height: 2em;
+    /* margin-left: 4em;
+    margin-right: 1em; */
+    color: #00548C;
+    /* background-color: green ; */
+}
+.Modal-libro input {
+    margin-bottom: .5rem;
+    padding: .5rem;
+    /* border: thin solid red; */
+    /* background-color: green; */
+    color: #00548C;
+}
+.Modal-box div {
+    text-align: center;
+}
+.Modal-libro input[type="submit"] {
+    cursor: pointer;
+    width: 17%;
+    font-size: 1.5em;
+    margin-top: 1.3em;
+    padding: .5rem auto;
+    border: 0;
+    border-radius: .25rem;
+    background-color: #00548C;
+    color: white;
+    /* transition: all .3s ease-in; */
+}
+.Modal-libro input[type="submit"]:hover {
+    background-color: #002D4C;
+}
+/* -------------------------FIN VENTANA MODAL------------------------ */
+
+/* ------------------------------FIN BODY---------------------------- */

@@ -1,0 +1,220 @@
+*,
+*::after,
+*::before {
+    /*box-sizing: inherit; /*todos los elementos heredaran del nodo principal... ( de html{} )*/
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Gothic A1';
+    width: 100vw;
+    height: 100vh;
+    /* background-color: #E7E7E7; */
+    /* position: relative; */
+    background-color: #fbfbfe;
+}
+a {text-decoration: none;}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+}
+
+
+.header {
+    background-color: #002D4C;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    margin: 0;
+    top: 0;
+    z-index: 50;
+}
+.logo {
+    height: 100%;
+}
+
+.btn-sesion-start,
+.btn-signup {
+    font-family: 'Gothic A1';
+    margin: 1em 1em 0 0;
+    padding: 1em 2em;
+    color: white;
+    background-color: #246f9c;
+    float: right;
+}
+.btn-sesion-start:hover,
+.btn-signup:hover {
+    background-color:#00548C;
+}
+
+
+
+
+
+.class-body {
+    height: 100%;
+    /* height: 200%; */
+    padding-top: 80px;
+}
+.bg {
+    /* background-color: rgb(93, 77, 77); */
+    padding: 5% 2.5%;
+    height: 100%;
+}
+.box-books {
+    /* outline: 5px solid black; */
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.split-article {
+    width: 50%;
+    height: 70%;
+    float: left;
+    padding: 0 2.63%;
+    margin: 0 0 5.26% 0;
+}
+.article {
+    width: 100%;
+    height: 100%;
+    /* outline: 10px double black; */
+    outline: 10px solid white;
+    background-color: white;
+    box-shadow: 0 0 50px 20px rgba(0,0,0,.1);
+    border-bottom: 3px solid #00395E;
+    /* outline: 3px solid black; */
+    /* float: left; */
+    /* margin-bottom: 5.55%; */
+    transition:all .5s ease;
+}
+.article:hover { transform:scale(1.05); }
+
+.article-bg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+.article-tipo p {
+    font-size: 1.8em;
+    padding-left: 1em;
+    color: white;
+    /* text-align: center; */
+    background-color: #00395E;
+}
+.article-libro {
+    width: 100%;
+    height: 89%;
+    padding-top: .5em;
+
+}
+.article-imagen {
+    /* display: block; */
+    width: 35%;
+    height: 97%;
+    /* background-image: url(../images/libros/1_201544706.jpg); */
+    background-size: 100% 100%;
+    margin-right: 2em;
+    float: left;
+}
+.article-nombre p {
+    /* position: absolute; */
+    /* display: block; */
+    font-size: 1.8em;
+    /* margin-bottom: .5em; */
+    color: #00548C;
+    
+    /* text-align: center; */
+    /* float: left; */
+    /* background-color: red; */
+    /* outline: 1px solid black; */
+    
+    /* height: 33%; */
+    /* width: 61%; */
+    /* left: 39%; */
+    /* overflow: hidden; */
+    
+    display: inline-block;
+    /* margin-bottom: .1em; */
+    /* float: left; */
+    width: 59%;
+    max-height: 3.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+.article-descripcion p {
+    /* position: absolute; */
+    /* display: block; */
+    font-size: 1.2em;
+    /* top: 47%; */
+    /* left: 39%; */
+    color: #00548C;
+
+    /* background-color: yellow; */
+    /* padding-top: 18%; */
+    /* float: right; */
+    /* outline: 1px solid black; */
+    
+    /* width: 59%; */
+    /* height: 31%; */
+    /* overflow: hidden; */
+    
+    display: block;
+    width: 59%;
+    max-height: 5em;
+    float: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.article-estado {
+    position: absolute;
+    display: block;
+    font-size: 1.1em;
+    left: 45%;
+    bottom: 2em;
+    color: #00548C;
+}
+.article-costo {
+    position: absolute;
+    display: block;
+    font-size: 2em;
+    left: 45%;
+    bottom: 0;
+    color: #00395E;
+    /* height: 10%;
+    width: 10%; */
+}
+
+.article-comprar {
+    position: absolute;
+    display: block;
+    right: 5%;
+    bottom: 5%;
+    /* height: 10%;
+    width: 10%; */
+
+    margin: 1em 1em 0 0;
+    padding: .5em 1em;
+    color: white;
+    background-color: #246f9c;
+    /* float: right; */
+}
+.article-comprar:hover {
+    background-color:#00548C;
+}

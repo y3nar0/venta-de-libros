@@ -1,0 +1,158 @@
+*,
+*::after,
+*::before {
+    /*box-sizing: inherit; /*todos los elementos heredaran del nodo principal... ( de html{} )*/
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: #fbfbfe; */
+}
+a {text-decoration: none;}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+}
+
+.header {
+    background-color: #002D4C;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    margin: 0;
+    top: 0;
+}
+.logo {
+    height: 100%;
+}
+
+.btn-sesion-start,
+.btn-signup {
+    font-family: 'Gothic A1';
+    margin: 1em 1em 0 0;
+    padding: 1em 2em;
+    color: white;
+    background-color: #246f9c;
+    float: right;
+}
+.btn-sesion-start:hover,
+.btn-signup:hover {
+    background-color:#00548C;
+}
+
+.class-body {
+    height: inherit;
+    padding-top: 80px;
+}
+
+
+.box-signup {
+    height: 100%;
+    width: 100%;
+    background-color: #00395E;
+    /* text-align: center; */
+    padding-top: 30px;
+    /* float: right; */
+}
+
+.box-signup h1 {
+    font-family: 'Gothic A1';
+    text-align: center;
+    color: #fbfbfe;
+    font-size: 50px;
+    letter-spacing: 15px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.box-signup h2 {
+    font-family: 'Gothic A1';
+    text-align: center;
+    color: #fbfbfe;
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.data-signup {
+    position: relative;
+    padding-top: 10px;
+    text-align: center;
+    /* margin-bottom: 50px; */
+}
+.box-form-text-label {
+    margin-bottom: 40px;
+}
+.form-text {
+    /* text-align: center; */
+    font-family: 'Gothic A1';
+    color: #fbfbfe;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background-color: #00395E;
+    left: 100px;
+    transition: all .3s ease-in-out;
+}
+.form-text-2 {color: #fbfbfe;font-size: 18px;font-family: 'Gothic A1';}
+
+.form-label {
+    font-family: 'Gothic A1';
+    background-color: #00395E;
+    color: #fbfbfe;
+    font-size: 18px;
+    position: relative;
+    bottom: 5px;
+    right: 200px;
+    transition: all .3s ease-in-out;
+    pointer-events: none;
+}
+
+.form-text:hover,
+.form-text:focus,
+.form-text:valid {
+    background-color: #00395E;
+    box-shadow: none;
+    outline: none;
+    border-bottom: 1px solid #fbfbfe;
+}
+.form-text:hover ~ .form-label,
+.form-text:focus ~ .form-label,
+.form-text:valid ~ .form-label {
+    color: #fbfbfe;
+    background-color: #00395E;
+    bottom: 25px;
+    right: 220px;
+}
+
+.lugar-buy-label {
+    text-align: center;
+    font-family: 'Gothic A1';
+    color: #fbfbfe;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background-color: #00395E;
+    left: 100px;
+    transition: all .3s ease-in-out;
+}
+
+.g-recaptcha {
+    margin-left: 100px;
+    margin-bottom: 50px;
+}
+.btn-buy {
+    font-family: 'Gothic A1';
+    display: block;
+    margin: 0 auto;
+    width: 130px;
+    padding: 1em;
+    color: white;
+    background-color: #04bbe7;
+    cursor: pointer;
+}
+.btn-buy:hover {
+    background-color: #002D4C;
+}
